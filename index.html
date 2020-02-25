@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='robots' content='index,follow,noodp,noydir'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+	<title>Создание сайта</title>
+	<meta name='description' content=''>
+	<meta name='keywords' content=''>
+	<meta property='og:title' content='Создание сайта'>
+	<meta property='og:site_name' content='Создание сайта'>
+	<meta property='og:description' content=''>
+	<link rel='stylesheet' href='https://crafty.site/css/main.css' type='text/css' charset='utf-8'>
+	<link rel='stylesheet' href='css/user_style.css?chache=101883' type='text/css' charset='utf-8'>
+	<link type='image/png' href='https://crafty.site/img/favicon.png' rel='shortcut icon' />
+</head>
+<body>
+	<div id='wrapper'>
+		<header class="simple-block" id="simple-block-2">
+			<p class="text-block" id="text-block-4">часы работы с 08:00 до 20:00<br>для детей от 1 года до 7 лет<br></p>
+		</header>
+		<div id="simple-block-1" class="simple-block">
+			<div class="divider-block" id="divider-block-1">
+				<hr>
+			</div>
+			<div class="colums-block two" id="colums-block-1">
+				<div class="">
+					<h1 class="text-block" id="text-block-1">Частный детский сад<br></h1>
+					<p class="text-block" id="text-block-2">Наши клубы – это частные детские сады с развивающими кружками для детей от 1 года до 7 лет. Мы работаем ежедневно с 8.00 до 20.00, также открыты группы неполного дня (с 8.00 до 13.00 или с 15.00 до 20.00).<br></p>
+				</div>
+				<div class="">
+					<p class="text-block" id="text-block-3">Оставьте заявку</p>
+					<form class="form-block" action="" method="post" id="form-block-1" onsubmit="return sendForm ('#form-block-1', event)">
+						<input type="text" name="phone" placeholder="Телефон">
+						<input type="email" name="email" placeholder="Email">
+						<button class="button-block" id="button-block-1">Отправить</button>
+						<div class="message">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="divider-block" id="divider-block-2">
+				<hr>
+			</div>
+			<div class="button-block-clear" id="button-block-clear-2">
+				<a href="https://baby-angel.ru" target="_blank">
+					<button class="button-block" id="button-block-2">Расписание кружков</button>
+				</a>
+			</div>
+		</div>
+		<div id="simple-block-3" class="simple-block">
+			<h2 class="text-block" id="text-block-5">Мы поможем Вам организовать досуг Вашего ребёнка!<br></h2>
+			<div class="colums-block three" id="colums-block-2">
+				<div class="">
+					<h1 class="text-block" id="text-block-6">Близко к дому</h1>
+					<p class="text-block" id="text-block-7">Мы находимся в шаговой доступности от Вашего дома<br></p>
+				</div>
+				<div class="">
+					<h1 class="text-block" id="text-block-8">Качественное питание</h1>
+					<p class="text-block" id="text-block-9">Трёх или пятиразовое питание по соглашению на базе детского центра по меню государственного дошкольного учреждения<br></p>
+				</div>
+				<div class="">
+					<h1 class="text-block" id="text-block-10">Хорошая подготовка к школе<br></h1>
+					<p class="text-block" id="text-block-11">Так как мы сотрудничаем с крупными компаниями, то цены у нас ниже. Итоговая цена будет на порядок ниже, чем у конкурентов.</p>
+				</div>
+			</div>
+		</div>
+		<div id="simple-block-4" class="simple-block divider-ears">
+			<p class="text-block" id="text-block-12">Свяжитесь с нами</p>
+			<p class="text-block" id="text-block-13">г. Москва, ул. Каштоянца, дом 47/1, (08:00 - 20:00), метро Юго-Западная<br>+7 (926) 205-47-87 (Ольга)<br>info@baby-angel.ru<br></p>
+		</div>
+
+	<!-- Конец HTML файла -->
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$("head").append("<link rel='stylesheet' href='https://crafty.site/css/dividers.css' type='text/css' charset='utf-8'>");
+</script>
+<script>
+resizeText ();
+
+$(window).resize(function() {
+	resizeText ();
+});
+
+function resizeText () {
+	$(".text-block").removeAttr ("style");
+	$(".text-block").each (function () {
+		var size = $(this).css ("font-size");
+		if ($(window).width () < 400 && parseInt (size) > 30)
+			$(this).css ("font-size", "30px");
+		else if ($(window).width () < 500 && parseInt (size) > 40)
+			$(this).css ("font-size", "40px");
+		else if ($(window).width () < 700 && parseInt (size) > 50)
+			$(this).css ("font-size", "50px");
+		else if ($(window).width () < 850 && parseInt (size) > 65)
+			$(this).css ("font-size", "65px");
+		else if ($(window).width () < 1000 && parseInt (size) > 80)
+			$(this).css ("font-size", "80px");
+	});
+}
+</script>
+<script>
+function sendForm (form, ev) {
+	ev.preventDefault();
+	var name = '%%NOTHING%%', phone = '%%NOTHING%%', email, subject = '%%NOTHING%%', message = '%%NOTHING%%';
+	if ($(form + " [name='name']").is(":visible"))
+		name = $(form + " [name='name']").val ();
+	if ($(form + " [name='phone']").is(":visible"))
+		phone = $(form + " [name='phone']").val ();
+	if ($(form + " [name='subject']").is(":visible"))
+		subject = $(form + " [name='subject']").val ();
+	if ($(form + " [name='message']").is(":visible"))
+		message = $(form + " [name='message']").val ();
+	var email = $(form + " [name='email']").val ();
+	$.ajax({
+		url:		'ajax/mail.php',
+		type:		'POST',
+		cache:		false,
+		data:		{'name':name, 'phone':phone, 'email':email, 'subject':subject, 'message':message},
+		dataType:	'html',
+		beforeSend: function () {
+			$(form + " .button-block").prop('disabled', true);
+		},
+		success: function(data) {
+			if (data == true) {
+				if (name != '')
+					$(form + " [name='name']").val ("");
+				if (phone != '')
+					$(form + " [name='phone']").val ("");
+				$(form + " [name='email']").val ("");
+				if (subject != '')
+					$(form + " [name='subject']").val ("");
+				if (message != '')
+					$(form + " [name='message']").val ("");
+				$(form + " .button-block").text ("Отправлено");
+				$(form + " .message").text('');
+			} else {
+				if (data == false)
+					$(form + " .message").text ("Проблема с сервером!");
+				else {
+					switch (data) {
+						case "name": $(form + " .message").text ("Имя не указано"); break;
+						case "phone": $(form + " .message").text ("Телефон указан неверно"); break;
+						case "email": $(form + " .message").text ("Email указан неверно"); break;
+						case "subject": $(form + " .message").text ("Тема не указана"); break;
+						case "message": $(form + " .message").text ("Сообщение не написано"); break;
+						default: $(form + " .message").text ("Какие-либо поля не заполнены");
+					}
+				}
+			}
+			$(form + " .button-block").prop('disabled', false);
+		}
+	});
+}
+</script>
+</body>
+</html>
