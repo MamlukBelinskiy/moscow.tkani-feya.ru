@@ -1,0 +1,324 @@
+#wrapper {
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.main-menu > div {
+	margin-left: 3%;
+}
+
+.simple-block {
+	width: 100%;
+	float: left;
+	background: #f0f0f0;
+	position: relative;
+	padding: 4%;
+	text-align: center;
+	z-index:0;
+}
+
+header.simple-block, footer.simple-block {
+	padding: 1.5% 4%;
+}
+
+.simple-block::before, .simple-block::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	pointer-events: none;
+	z-index:-1;
+}
+
+.text-block {
+	margin-left: 5%;
+	width: 90%;
+}
+
+.divider-block {
+	padding: 10px 0px;
+}
+
+.divider-block hr {
+	margin: 0;
+	padding: 0;
+}
+
+.video-block, .image-block {
+	width: 100%;
+}
+
+.colums-block {
+	align-items:center;
+	justify-content: space-between;
+	display: flex;
+}
+
+.colums-block>div {
+	flex-basis: 49.5%;
+	margin-top: 5px;
+	width: 100%;
+	min-width: 0;
+}
+
+@media (max-width: 700px) {
+	.colums-block.two {
+		flex-wrap: wrap;
+	}
+
+	.colums-block.two * {
+		text-align: center!important;
+	}
+
+	.colums-block.two>div {
+		flex-basis: 100%!important;
+		width: 100%!important;
+	}
+}
+
+@media (max-width: 850px) {
+	.colums-block.three {
+		flex-wrap: wrap;
+	}
+
+	.colums-block.three * {
+		text-align: center!important;
+	}
+
+	.colums-block.three>div {
+		flex-basis: 100%!important;
+		width: 100%!important;
+	}
+}
+
+.button-block {
+	padding: 10px 10px;
+	max-width: 100%;
+	border-radius: 5px;
+	background: #e57e7e;
+	color: white;
+	cursor: pointer;
+	border: 2px solid #d66969;
+	-webkit-box-shadow: 0px 2px 8px -3px rgba(71,71,71,0.98);
+	-moz-box-shadow: 0px 2px 8px -3px rgba(71,71,71,0.98);
+	box-shadow: 0px 2px 8px -3px rgba(71,71,71,0.98);
+	font-size: 1em;
+}
+
+@media (max-width: 699px) {
+	.button-block {
+		padding-left: 1%!important;
+		padding-right: 1%!important;
+	}
+}
+
+.button-block-clear {
+	width: 100%
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 90%;
+	margin: 0 5%;
+}
+
+form input, form textarea, form button {
+	padding: 10px;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 0.9em;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border: 2px solid #d5d5d5;
+	min-width: 150px;
+}
+
+form textarea {
+	resize: none;
+	border: 2px solid #d5d5d5;
+}
+
+form input:focus, form textarea:focus {
+	border-color: #d88989!important;
+}
+
+form .message {
+	width:100%;
+	margin-top:5px;
+	color: #d07979;
+	font-weight: bold
+}
+
+/* Пользовательские стили */
+
+#simple-block-1 {
+	background: #0d870d;
+}
+
+#text-block-1 {
+	font-size: 4.1em;
+	color: #032b91;
+}
+
+#text-block-2 {
+	font-size: 1.2em;
+	color: #ffee00;
+}
+
+#text-block-3 {
+	font-size: 1.6em;
+	color: #f5f4e2;
+	margin: 1.75% 11%;
+	text-align: right;
+	width: 78%;
+}
+
+#divider-block-1 hr {
+	border-top-width: 0px;
+	margin: 8% 0%;
+}
+
+#divider-block-2 hr {
+	border-top-width: 0px;
+	margin: 7.5% 0%;
+}
+
+#form-block-1 {
+	margin: 0% 10.5%;
+	flex-basis: 79%;
+	justify-content: flex-end;
+}
+
+#form-block-1 input, #form-block-1 textarea, #form-block-1 button {
+	width: 42%;
+	border-radius: 11px;
+}
+
+#form-block-1 input, #form-block-1 textarea {
+	background: #fc9700;
+	border-color: #c96400;
+	color: #ffff99;
+}
+
+#form-block-1 button {
+	background: #b4c21f;
+	border-color: #818f00;
+}
+
+#simple-block-2 {
+	background: #ffd500;
+}
+
+#text-block-4 {
+	text-align: right;
+}
+
+#form-block-1 button:hover {
+	background: #9ba906;
+	border-color: #687600;
+}
+
+#simple-block-3 {
+	background: #f1ede8;
+}
+
+#text-block-5 {
+	font-size: 2.7em;
+	color: #157318;
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+#text-block-6 {
+	font-size: 1.7em;
+	color: #171ee8;
+	margin: 2% 5%;
+}
+
+#text-block-7 {
+	font-size: 1.1em;
+	color: #57553f;
+	margin: 0% 9%;
+	width: 82%;
+}
+
+#text-block-8 {
+	font-size: 1.7em;
+	color: #001df7;
+	margin: 2% 5%;
+}
+
+#text-block-9 {
+	font-size: 1.1em;
+	color: #57553f;
+	margin: 0% 9%;
+	width: 82%;
+}
+
+#text-block-10 {
+	font-size: 1.7em;
+	color: #001df7;
+	margin: 2% 5%;
+}
+
+#text-block-11 {
+	font-size: 1.1em;
+	color: #57553f;
+	margin: 0% 9%;
+	width: 82%;
+}
+
+#colums-block-2 {
+	margin: 1.75% 0;
+	align-items: flex-start;
+}
+
+#colums-block-2>div {
+	flex-basis: 33%;
+}
+
+#simple-block-4 {
+	background: #3a9931;
+}
+
+#text-block-12 {
+	font-size: 3.15em;
+	color: #0900ff;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#text-block-13 {
+	font-size: 1.85em;
+	color: #3d3d3d;
+	margin: 2.75% 5%;
+}
+
+#button-block-2 {
+	background: #f5671b;
+}
+
+#button-block-2:hover {
+	background: #dc4e02;
+}
+
+#form-block-1 ::-webkit-input-placeholder {
+	color: #ffff99
+}
+
+#form-block-1 ::-moz-placeholder {
+	color: #ffff99
+}
+
+#form-block-1 :-ms-input-placeholder {
+	color: #ffff99
+}
+
+#form-block-1 :-moz-placeholder {
+	color: #ffff99
+}
+
+/* Конец пользовательских стилей */
